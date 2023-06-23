@@ -1,0 +1,18 @@
+.list-item {
+    width: 100%;
+    height: 100%;
+    box-shadow: 50rem black;
+}
+
+.list-item-header {
+    align-self: center;
+    font-weight: 600;
+    color: #f6893b;
+    font-size: large;
+}
+
+
+
+p {
+    font-size: 8px;
+}

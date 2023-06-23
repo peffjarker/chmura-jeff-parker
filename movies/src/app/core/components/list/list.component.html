@@ -1,0 +1,24 @@
+<h3 class="list-subheader">
+    <span>
+        Status Response: <mat-icon *ngIf="validationStatus === 200">check</mat-icon>
+        <mat-icon *ngIf="validationStatus !== 200">cancel</mat-icon>
+    </span>
+</h3>
+<section>
+    <mat-grid-list *ngIf="innerWidth >= 1420" class="list" [cols]="listLength/2">
+        <mat-grid-tile *ngFor="let actor of listToValidate">
+            <app-list-item [actor]="actor"></app-list-item>
+        </mat-grid-tile>
+    </mat-grid-list>
+    <mat-grid-list *ngIf="innerWidth < 1420 && innerWidth >= 820" class="list" [cols]="listLength/4">
+        <mat-grid-tile *ngFor="let actor of listToValidate">
+            <app-list-item [actor]="actor"></app-list-item>
+        </mat-grid-tile>
+    </mat-grid-list>
+    <mat-grid-list *ngIf="innerWidth < 820 && innerWidth && innerWidth >= " class="list" [cols]="2">
+        <mat-grid-tile *ngFor="let actor of listToValidate">
+            <app-list-item [actor]="actor"></app-list-item>
+        </mat-grid-tile>
+    </mat-grid-list>
+    <br/>
+</section>
