@@ -15,8 +15,13 @@
             <app-list-item [actor]="actor"></app-list-item>
         </mat-grid-tile>
     </mat-grid-list>
-    <mat-grid-list *ngIf="innerWidth < 820 && innerWidth && innerWidth >= " class="list" [cols]="2">
+    <mat-grid-list *ngIf="innerWidth < 820 && innerWidth >= 700" class="list" [cols]="2">
         <mat-grid-tile *ngFor="let actor of listToValidate">
+            <app-list-item [actor]="actor"></app-list-item>
+        </mat-grid-tile>
+    </mat-grid-list>
+    <mat-grid-list *ngIf="innerWidth < 700" class="list" cols="1" rowHeight="300px">
+        <mat-grid-tile style="" *ngFor="let actor of listToValidate">
             <app-list-item [actor]="actor"></app-list-item>
         </mat-grid-tile>
     </mat-grid-list>
